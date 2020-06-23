@@ -1,0 +1,28 @@
+.Chat-main
+  .Chat-main__info
+    .Chat-main__left
+      %p.Chat-main__text test
+      %p.Chat-main__text__inner Member :masa
+    .Chat-main__right
+      %a.Chat-main__text__edit{ href: '#' }Edit
+
+  .Chat-main__message-list
+    .Chat-main__main
+      %p.Chat-main__name masa
+      %p.Chat-main__time 2019/11/20(Wed) 17:43:00
+    .Chat-main__title
+      %span.Chat-main__title__inner おはよう！
+    .Chat-main__main
+      %p.Chat-main__name masa
+      %p.Chat-main__time 2019/11/20(Wed) 17:43:34
+    .Chat-main__title
+      %span.Chat-main__title__inner 今日は夜から雨
+
+  .Chat-main__message-form
+    .Chat-main__message__box
+      .Chat-main__message__contents
+        %input.Chat-main__message-left{:type => "text",:placeholder => "type a message"}
+        %label{class: "form-image"}
+          = icon('fas' , 'image', class: 'Chat-main__message-icon')
+          %input{type: "file", class: 'Chat-main__file-delete'}
+      %input.Chat-main__message-btn{type: "submit", value: "SEND"}

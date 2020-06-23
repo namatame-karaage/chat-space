@@ -1,0 +1,15 @@
+.Side-bar
+  .Side-bar__user-name
+    .Side-bar__items
+      %p.Side-bar__items__left masa
+      .Side-bar__items__right
+        = link_to '#' , class: 'Side-bar__btn' do
+          = icon('fas' , 'edit')
+          %span<>
+        = link_to '#' , class: 'Side-bar__btn' do
+          = icon('fas' , 'cog')
+  .Side-bar__list
+    .Side-bar__inner
+      %p.Side-bar__text techcamp
+      %p.Side-bar__text__inner まだメッセージがありません
+  
