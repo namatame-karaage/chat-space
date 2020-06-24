@@ -1,7 +1,9 @@
 @import "reset";
-@import "modules/messages.scss";
+@import "modules/messages";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "modules/user";
+@import "modules/flash";
 
 $bold: bold;
 $flex: flex;
