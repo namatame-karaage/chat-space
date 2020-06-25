@@ -4,13 +4,16 @@
       %h3.Side-bar__items__left 
         = current_user.name
       .Side-bar__items__right
-        = link_to '#' , class: 'Side-bar__btn' do
+        = link_to new_group_path , class: 'Side-bar__btn' do
           = icon('fas' , 'edit')
           %span<>
         = link_to edit_user_path(current_user), class: 'Side-bar__btn' do
           = icon('fas' , 'cog')
   .Side-bar__list
-    .Side-bar__inner
-      %p.Side-bar__text techcamp
-      %p.Side-bar__text__inner まだメッセージがありません
-  
+    - current_user.groups.each do |group|
+      .Side-bar__inner
+        = link_to '#' do
+          .Side-bar__text
+            = group.name
+          .Side-bar__text__inner
+            メッセージはありません
