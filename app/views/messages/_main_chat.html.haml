@@ -2,7 +2,7 @@
   .Chat-main__info
     .Chat-main__left
       %p.Chat-main__text 
-      = @group.name
+        = @group.name
       .Chat-main__text__inner
         Member:
         - @group.users.each do |user|
