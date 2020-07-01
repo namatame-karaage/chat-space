@@ -94,7 +94,7 @@ $c3black: #333333;
       margin: 35px 0 15px;
     }
     &__text__inner {
-      width: 100px;
+      display: flex;
       color: #999999;
       font-size: 12px;
     }
@@ -111,6 +111,7 @@ $c3black: #333333;
     &__message-list {
       height: calc(100vh - 100px - 90px);
       background-color: #fafafa;
+      overflow: scroll;
     }
 
     &__main {
