@@ -2,12 +2,12 @@ $(function () {
   function buildHTML(message) {
     if (message.image) {
       let html = `<div class="Chat-main__message-list>
-          <div class="Chat-main__main">
+        <div class="Chat-main__main">
             <div class="Chat-main__name">
-            ${message.user_name}
+              ${message.user_name}
             </div>
             <div class="Chat-main__time">
-            ${message.created_at}
+              ${message.created_at}
             </div>
           </div>
           <div class="Chat-main__title">
@@ -21,19 +21,19 @@ $(function () {
     } else {
       let html = `<div class="Chat-main__message-list>
         <div class="Chat-main__main">
-          <div class="Chat-main__name">
-            ${message.user_name}
+            <div class="Chat-main__name">
+              ${message.user_name}
+            </div>
+            <div class="Chat-main__time">
+              ${message.created_at}
+            </div>
           </div>
-          <div class="Chat-main__time">
-            ${message.created_at}
+          <div class="Chat-main__title">
+            <p class="Chat-main__title__inner">
+              ${message.content}
+            </p>
           </div>
-        </div>
-        <div class="Chat-main__title">
-          <p class="Chat-main__title__inner">
-            ${message.content}
-          </p>
-        </div>
-      </div>`;
+        </div>`;
       return html;
     }
   }
@@ -53,11 +53,10 @@ $(function () {
         let html = buildHTML(data);
         $(".Chat-main__message-list").append(html);
         $("form")[0].reset();
-        $('.Chat-main__message-btn').prop('disabled', false);
+        $(".Chat-main__message-btn").prop("disabled", false);
         $(".Chat-main__message-list").animate({
           scrollTop: $(".Chat-main__message-list")[0].scrollHeight,
         });
-        
       })
       .fail(function () {
         alert("メッセージの送信に失敗しました");
