@@ -4,10 +4,10 @@ $(function () {
       let html = `<div class="Chat-main__message-list>
           <div class="Chat-main__main">
             <div class="Chat-main__name">
-              ${message.user_name}
+            ${message.user_name}
             </div>
             <div class="Chat-main__time">
-              ${message.created_at}
+            ${message.created_at}
             </div>
           </div>
           <div class="Chat-main__title">
@@ -59,7 +59,7 @@ $(function () {
         });
         
       })
-      .file(function () {
+      .fail(function () {
         alert("メッセージの送信に失敗しました");
       });
   });

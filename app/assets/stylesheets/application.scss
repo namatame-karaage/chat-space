@@ -112,19 +112,16 @@ $c3black: #333333;
       height: calc(100vh - 100px - 90px);
       background-color: #fafafa;
       overflow: scroll;
+      padding: 35px 40px 0;
     }
 
     &__main {
-      padding: 35px 0 12px;
-      margin-left: 40px;
       display: $flex;
-    }
-    &__title {
-      margin-left: 40px;
     }
     &__title__inner {
       color: #434a54;
       font-size: 14px;
+      margin-top: 12px;
       margin-bottom: 46px;
     }
     &__name {
