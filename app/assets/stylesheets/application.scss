@@ -115,9 +115,9 @@ $c3black: #333333;
       padding: 35px 40px 0;
     }
 
-    // &__main {
-    //   display: $flex;
-    // }
+    &__message-box {
+      display: $flex;
+    }
     &__title__inner {
       color: #434a54;
       font-size: 14px;
