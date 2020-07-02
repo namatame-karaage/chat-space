@@ -2,7 +2,8 @@ $(function () {
   function buildHTML(message) {
     if (message.image) {
       let html = `<div class="Chat-main__message-list>
-        <div class="Chat-main__main">
+        <div class="Chat-main__message-box" data-message-id=${message.id}>
+          <div class="Chat-main__main">
             <div class="Chat-main__name">
               ${message.user_name}
             </div>
@@ -10,6 +11,7 @@ $(function () {
               ${message.created_at}
             </div>
           </div>
+        </div>
           <div class="Chat-main__title">
             <p class="Chat-main__title__inner">
               ${message.content}
@@ -20,14 +22,16 @@ $(function () {
       return html;
     } else {
       let html = `<div class="Chat-main__message-list>
+      <div class="Chat-main__message-box" data-message-id=${message.id}>
         <div class="Chat-main__main">
-            <div class="Chat-main__name">
-              ${message.user_name}
-            </div>
-            <div class="Chat-main__time">
-              ${message.created_at}
-            </div>
+          <div class="Chat-main__name">
+             ${message.user_name}
           </div>
+          <div class="Chat-main__time">
+            ${message.created_at}
+          </div>
+        </div>
+      </div>
           <div class="Chat-main__title">
             <p class="Chat-main__title__inner">
               ${message.content}
@@ -53,13 +57,14 @@ $(function () {
         let html = buildHTML(data);
         $(".Chat-main__message-list").append(html);
         $("form")[0].reset();
-        $(".Chat-main__message-btn").prop("disabled", false);
         $(".Chat-main__message-list").animate({
-          scrollTop: $(".Chat-main__message-list")[0].scrollHeight,
+          scrollTop: $(".Chat-main__message-list")[0].scrollHeight
         });
+        $(".Chat-main__message-btn").prop("disabled", false);
       })
       .fail(function () {
         alert("メッセージの送信に失敗しました");
+        $(".Chat-main__message-btn").prop("disabled", false);
       });
   });
 });
