@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       format.json
     end
   end
-  
+
   def edit
   end
 

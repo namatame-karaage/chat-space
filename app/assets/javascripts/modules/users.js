@@ -21,9 +21,8 @@ $(function () {
                 <input name="group[user_ids][]" type="hidden" value="${id}" />
                 <div class="ChatMember__remove ChatMember__button">削除</div>
               </div>`;
-    $('.ChatMembers').append(html);
+    $(".ChatMembers").append(html);
   }
-
 
   $("#UserSerch__field").on("keyup", function () {
     let input = $("#UserSerch__field").val();
@@ -46,16 +45,16 @@ $(function () {
         }
       })
       .fail(function () {
-        alert("ユーザー検索に失敗しました").on()
+        alert("ユーザー検索に失敗しました").on();
       });
   });
-  $('#UserSearchResult').on('click', ".ChatMember__add", function () {
+  $("#UserSearchResult").on("click", ".ChatMember__add", function () {
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this).parent().remove();
     addMember(userName, userId);
   });
-  $('.ChatMembers').on("click", ".ChatMember__remove", function () {
+  $(".ChatMembers").on("click", ".ChatMember__remove", function () {
     $(this).parent().remove();
   });
 });
