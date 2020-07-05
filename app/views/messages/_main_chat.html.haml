@@ -1,14 +1,14 @@
 .Chat-main
   .Chat-main__info
     .Chat-main__left
-      %p.Chat-main__text 
+      %p.Chat-main__text
         = @group.name
       .Chat-main__text__inner
         Member:
         - @group.users.each do |user|
           = user.name
     .Chat-main__right
-      .Chat-main__text__edit 
+      .Chat-main__text__edit
         = link_to edit_group_path(@group.id), class: 'Chat-main__a' do
           Edit
 

@@ -2,8 +2,8 @@ $(function () {
   function buildHTML(message) {
     if (message.image) {
       let html = `<div class="Chat-main__message-list>
+      <div class="Chat-main__main">
         <div class="Chat-main__message-box" data-message-id=${message.id}>
-          <div class="Chat-main__main">
             <div class="Chat-main__name">
               ${message.user_name}
             </div>
@@ -22,8 +22,8 @@ $(function () {
       return html;
     } else {
       let html = `<div class="Chat-main__message-list>
-      <div class="Chat-main__message-box" data-message-id=${message.id}>
-        <div class="Chat-main__main">
+      <div class="Chat-main__main">
+        <div class="Chat-main__message-box" data-message-id=${message.id}>
           <div class="Chat-main__name">
              ${message.user_name}
           </div>
@@ -58,7 +58,7 @@ $(function () {
         $(".Chat-main__message-list").append(html);
         $("form")[0].reset();
         $(".Chat-main__message-list").animate({
-          scrollTop: $(".Chat-main__message-list")[0].scrollHeight
+          scrollTop: $(".Chat-main__message-list")[0].scrollHeight,
         });
         $(".Chat-main__message-btn").prop("disabled", false);
       })
