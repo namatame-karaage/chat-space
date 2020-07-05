@@ -60,6 +60,9 @@ $c3black: #333333;
       width: 260px;
       margin: 0 20px;
     }
+    &__link {
+      text-decoration: none;
+    }
     &__text {
       font-size: 15px;
       padding-top: 20px;
@@ -73,7 +76,7 @@ $c3black: #333333;
     }
   }
 
-  & .Chat-main {
+  .Chat-main {
     width: calc(100vw - 300px);
     height: 100vh;
 
@@ -114,7 +117,9 @@ $c3black: #333333;
       overflow: scroll;
       padding: 35px 40px 0;
     }
-
+    &__main {
+      display: $flex;
+    }
     &__message-box {
       display: $flex;
     }
@@ -128,6 +133,7 @@ $c3black: #333333;
       color: $c3black;
       font-size: 16px;
       margin-right: 7px;
+      font-weight: $bold;
     }
     &__time {
       color: #999999;
@@ -149,7 +155,7 @@ $c3black: #333333;
       height: 50px;
       padding-left: 15px;
       color: #999999;
-      border: none; 
+      border: none;
     }
     &__message-icon {
       font-size: 25px;
